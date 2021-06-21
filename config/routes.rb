@@ -6,4 +6,8 @@ Rails.application.routes.draw do
   get "/movies_path", controller: "movies", action: "all_movies"
 
   get "/one_movie", controller: "movies", action: "one_movie"
+
+  get "/display_one", controller: "movies", action: "show"
+
+  #I'm super lost when it comes to parameters. Sorry about this sad homework submission :/
 end
