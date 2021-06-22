@@ -7,8 +7,8 @@ class MoviesController < ApplicationController
   def create
     movies = Movie.new(
       title: params[:title],
-      year: params[:year]
-      description: params[:description]
+      year: params[:year],
+      description: params[:description],
     )
 
     movies.save
@@ -30,6 +30,6 @@ class MoviesController < ApplicationController
   def destroy
     movie = Movie.find_by(id: params[:id])
     movie.destroy
-    render json: {message: "Movie gone foreva."}
+    render json: { message: "Movie gone foreva." }
   end
 end

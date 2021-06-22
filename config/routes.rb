@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   patch "/actors/:id" => "actors#update"
 
-  destroy "/actors/:id" => "actors#destroy"
+  delete "/actors/:id" => "actors#destroy"
 
   #=================================================
 
@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 
   patch "/movies/:id" => "movies#update"
 
-  destroy "/movies/:id" => "movies#destroy"
+  delete "/movies/:id" => "movies#destroy"
 end
