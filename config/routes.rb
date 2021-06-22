@@ -3,21 +3,23 @@ Rails.application.routes.draw do
 
   get "/actors" => "actors#index"
 
-  # post "/actors" => "actors#create"
+  post "/actors" => "actors#create"
 
-  # get "/actors/:id" => "actors#show"
+  get "/actors/:id" => "actors#show"
 
-  # patch "/actors/:id" => "actors#update"
+  patch "/actors/:id" => "actors#update"
 
-  # destroy "/actors/:id" => "actors#destroy"
+  destroy "/actors/:id" => "actors#destroy"
 
-  # get "/movies" => "movies#index"
+  #=================================================
 
-  # post "/movies" => "movies#create"
+  get "/movies" => "movies#index"
 
-  # get "/movies/:id" => "movies#show"
+  post "/movies" => "movies#create"
 
-  # patch "/movies/:id" => "movies#update"
+  get "/movies/:id" => "movies#show"
 
-  # destroy "/movies/:id" => "movies#destroy"
+  patch "/movies/:id" => "movies#update"
+
+  destroy "/movies/:id" => "movies#destroy"
 end
