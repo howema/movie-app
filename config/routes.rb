@@ -1,13 +1,23 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  get "/actor_id", controller: "actors", action: "actor_id"
+  get "/actors" => "actors#index"
 
-  get "/movies_path", controller: "movies", action: "all_movies"
+  # post "/actors" => "actors#create"
 
-  get "/one_movie", controller: "movies", action: "one_movie"
+  # get "/actors/:id" => "actors#show"
 
-  get "/display_one", controller: "movies", action: "show"
+  # patch "/actors/:id" => "actors#update"
 
-  #I'm super lost when it comes to parameters. Sorry about this sad homework submission :/
+  # destroy "/actors/:id" => "actors#destroy"
+
+  # get "/movies" => "movies#index"
+
+  # post "/movies" => "movies#create"
+
+  # get "/movies/:id" => "movies#show"
+
+  # patch "/movies/:id" => "movies#update"
+
+  # destroy "/movies/:id" => "movies#destroy"
 end
