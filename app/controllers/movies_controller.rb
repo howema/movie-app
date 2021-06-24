@@ -9,6 +9,9 @@ class MoviesController < ApplicationController
       title: params[:title],
       year: params[:year],
       description: params[:description],
+      director: params[:director],
+      english: params[:english],
+
     )
 
     movies.save
@@ -25,6 +28,8 @@ class MoviesController < ApplicationController
     movie.title = params[:title] || movie.title
     movie.year = params[:year] || movie.year
     movie.description = params[:description] || movie.description
+    movie.director = params[:director] || movie.director
+    movie.english = params[:english] || movie.english
   end
 
   def destroy
