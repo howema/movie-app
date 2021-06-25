@@ -14,8 +14,12 @@ class MoviesController < ApplicationController
 
     )
 
-    movies.save
-    render json: movies.as_json
+    if user.save
+      render json: user.as_json
+    else
+      render json: { errors: users.errors.full_messages },
+             status: :unprocessable_entity
+    end
   end
 
   def show
@@ -30,6 +34,13 @@ class MoviesController < ApplicationController
     movie.description = params[:description] || movie.description
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
+
+    if user.save
+      render json: user.as_json
+    else
+      render json: { errors: users.errors.full_messages },
+             status: :unprocessable_entity
+    end
   end
 
   def destroy

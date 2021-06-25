@@ -10,8 +10,14 @@ class ActorsController < ApplicationController
       last_name: params[:last_name],
       known_for: params[:known_for],
     )
-    actor.save
-    render json: actor.as_json
+
+
+    if user.save
+      render json: user.as_json
+    else
+      render json: { errors: users.errors.full_messages },
+             status: :unprocessable_entity
+    end
   end
 
   def show
@@ -24,6 +30,14 @@ class ActorsController < ApplicationController
     actor.first_name = params[:first_name] || actor.first_name
     actor.last_name = params[:last_name] || actor.last_name
     actor.known_for = params[:known_for] || actor.known_for
+
+
+    if user.save
+      render json: user.as_json
+    else
+      render json: { errors: users.errors.full_messages },
+             status: :unprocessable_entity
+    end
   end
 
   def destroy
