@@ -9,8 +9,11 @@ class ActorsController < ApplicationController
     actor = Actor.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
-      known_for: params[:known_for]
+      known_for: params[:known_for],
       movie_id: params[:movie_id],
+      age: params[:age],
+      gender: params[:gender],
+
     )
 
     if user.save
@@ -32,6 +35,8 @@ class ActorsController < ApplicationController
     actor.last_name = params[:last_name] || actor.last_name
     actor.known_for = params[:known_for] || actor.known_for
     actor.movie_id = params[:movie_id] || actor.movie_id
+    actor.age = params[:age] || actor.age
+    actor.gender = params[:gender] || actor.gender
 
     if user.save
       render json: user.as_json

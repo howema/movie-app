@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
     movies = Movie.new(
       title: params[:title],
       year: params[:year],
-      description: params[:description],
+      plot: params[:plot],
       director: params[:director],
       english: params[:english],
 
@@ -32,7 +32,7 @@ class MoviesController < ApplicationController
     movie = Movie.find_by(id: params[:id])
     movie.title = params[:title] || movie.title
     movie.year = params[:year] || movie.year
-    movie.description = params[:description] || movie.description
+    movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
 
