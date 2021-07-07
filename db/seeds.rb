@@ -20,16 +20,26 @@
 
 # actor = Actor.create(first_name: "Geena", last_name: "Davis", known_for: "The Fly", gender: "F", age: "65")
 
-actor = Actor.create!(first_name: "Angelina", last_name: "Jolie", known_for: "Lara Croft: Tomb Raider", gender: "F", age: "46", movie_id: 19)
+# actor = Actor.create!(first_name: "Angelina", last_name: "Jolie", known_for: "Lara Croft: Tomb Raider", gender: "F", age: "46", movie_id: 19)
 
-actor = Actor.create!(first_name: "Guy", last_name: "Pearce", known_for: "The Count of Monte Cristo", gender: "M", age: 53, movie_id: 16)
+# actor = Actor.create!(first_name: "Guy", last_name: "Pearce", known_for: "The Count of Monte Cristo", gender: "M", age: 53, movie_id: 16)
 
-actor = Actor.create!(first_name: "Jim", last_name: "Caviezal", known_for: "The Count of Monte Cristo", gender: "M", age: 52, movie_id: 16)
+# actor = Actor.create!(first_name: "Jim", last_name: "Caviezal", known_for: "The Count of Monte Cristo", gender: "M", age: 52, movie_id: 16)
 
-actor = Actor.create!(first_name: "Val", last_name: "Kilmer", known_for: "The Saint", gender: "M", age: 61, movie_id: 17)
+# actor = Actor.create!(first_name: "Val", last_name: "Kilmer", known_for: "The Saint", gender: "M", age: 61, movie_id: 17)
 
-actor = Actor.create!(first_name: "Elisabeth", last_name: "Shue", known_for: "The Saint", gender: "F", age: 57, movie_id: 17)
+# actor = Actor.create!(first_name: "Elisabeth", last_name: "Shue", known_for: "The Saint", gender: "F", age: 57, movie_id: 17)
 
-actor = Actor.create!(first_name: "Uma", last_name: "Thurman", known_for: "Kill Bill: Vol. 1", gender: "F", age: 51, movie_id: 18)
+# actor = Actor.create!(first_name: "Uma", last_name: "Thurman", known_for: "Kill Bill: Vol. 1", gender: "F", age: 51, movie_id: 18)
 
-actor = Actor.create!(first_name: "Lucy", last_name: "Lu", known_for: "Kill Bill: Vol. 1", gender: "F", age: 52, movie_id: 18)
+# actor = Actor.create!(first_name: "Lucy", last_name: "Lu", known_for: "Kill Bill: Vol. 1", gender: "F", age: 52, movie_id: 18)
+
+# genre = Genre.create!(name: "Action")
+
+# genre = Genre.create!(name: "Adventure")
+
+# genre = Genre.create!(name: "Historical Adventure")
+
+# genre = Genre.create!(name: "Comedy")
+
+# genre = Genre.create!(name: "Thriller")
