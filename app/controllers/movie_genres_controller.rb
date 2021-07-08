@@ -5,10 +5,12 @@ class MovieGenresController < ApplicationController
       genre_id: params[:genre_id],
     )
 
-    if user.save
-      render json: user.as_json
+    movie_genre.save #this might be unnecessary
+
+    if movie_genre.save
+      render json: movie_genre.as_json
     else
-      render json: { errors: users.errors.full_messages },
+      render json: { errors: movie_genre.errors.full_messages },
              status: :unprocessable_entity
     end
   end
