@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :authenticate_admin, except: [:index, :show]
+  # before_action :authenticate_admin, except: [:index, :show]
 
   def index
     movies = Movie.all
@@ -14,15 +14,22 @@ class MoviesController < ApplicationController
       plot: params[:plot],
       director: params[:director],
       english: params[:english],
+      image: params[:image],
 
     )
 
-    if user.save
-      render json: user.as_json
+    if movies.save
+      render json: movies.as_json
     else
-      render json: { errors: users.errors.full_messages },
+      render json: { errors: errors.full_messages },
              status: :unprocessable_entity
     end
+    # if user.save
+    #   render json: user.as_json
+    # else
+    #   render json: { errors: users.errors.full_messages },
+    #          status: :unprocessable_entity
+    # end
   end
 
   def show
@@ -37,13 +44,21 @@ class MoviesController < ApplicationController
     movie.plot = params[:plot] || movie.plot
     movie.director = params[:director] || movie.director
     movie.english = params[:english] || movie.english
+    movie.image = params[:image] || movie.image
 
-    if user.save
-      render json: user.as_json
+    if movie.save
+      render json: movie.as_json
     else
-      render json: { errors: users.errors.full_messages },
+      render json: { errors: errors.full_messages },
              status: :unprocessable_entity
     end
+
+    # if user.save
+    #   render json: user.as_json
+    # else
+    #   render json: { errors: users.errors.full_messages },
+    #          status: :unprocessable_entity
+    # end
   end
 
   def destroy
